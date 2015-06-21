@@ -6,8 +6,6 @@ var Router = Ember.Router.extend({
 });
 
 export default Router.map(function() {
-    this.route('popular-now')
-    this.resourse('channels', function(){
-        this.route('show', { path: 'channel' })
-    })
+
+    this.resource('releases', { path: '/:owner/:repo/releases' })
 });
